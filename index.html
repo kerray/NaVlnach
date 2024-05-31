@@ -187,6 +187,7 @@ Pokračování v budoucnu...
 
 &lt;img src=&quot;images/QR.jpg&quot; width=&quot;256&quot; height=&quot;256&quot;&gt;
 ↑Projekt můžeš podpořit↑
+(Když do poznámky k převodu napíšeš své jméno či přezdívku, obtiskneš se tak do tohoto projektu)
 
 &lt;a href=&quot;https://bit.ly/NaVlnach&quot;&gt;Odebírání herních novinek&lt;/a&gt;
 
@@ -1253,7 +1254,7 @@ __//+1 Bod zpomalení//__&lt;&lt;set $zpomaleni += 1&gt;&gt;
 Utíkáš, co ti síly stačí a slyšíš ho, jak ti dupe za zády a pomalu tě dohání. Kousek před tebou právě z domu vychází nějaká paní...
 
 [[Poprosit ji o pomoc]]
-[[Proběhnout kolem ní a plácnout ji po zadku]]</tw-passagedata><tw-passagedata pid="174" name="Ocenění" tags="" position="125,125" size="100,100">&lt;center&gt;
+[[Proběhnout kolem ní a plácnout ji po zadku]]</tw-passagedata><tw-passagedata pid="174" name="Ocenění" tags="" position="125,150" size="100,100">&lt;center&gt;
 &lt;&lt;if setup.oceneni(&quot;Chuť dálných krajin&quot;) &gt;&gt;&lt;b&gt; Chuť dálných krajin&lt;/b&gt;&lt;&lt;else&gt;&gt;&lt;b&gt;Chuť dálných krajin&lt;/b&gt;
 Táta musí být v dialogu spokojen&lt;&lt;/if&gt;&gt;
 
@@ -1268,7 +1269,9 @@ Táta musí být v dialogu spokojen&lt;&lt;/if&gt;&gt;
 memorize(&#39;oceneni&#39;, {});
 &lt;&lt;/script&gt;&gt;&lt;&lt;goto Ocenění&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;/center&gt;</tw-passagedata><tw-passagedata pid="175" name="Odejdeš domů" tags="korektura Změna-hudby" position="4825,2950" size="100,100">Sklopila jsi hlavu a po tvářích ti začaly téct slzy. Šouravým krokem ses vydala nazpět po mole k souši. Obraz se ti slzami vlní a slané kapky dopadají a vpíjí se do starého dřeva, které před tím už tolik slané vody máčelo. Jdeš teď blízko okraji a v jednu chvíli jsi musela zastavit, abys nenarazila do starého vousatého rybáře v čepici, který tam na kraji mola sedí a rybaří. Ten k tobě vzhlídne a v jeho dobrácké tváři se objeví ustaraný výraz. &quot;Copak se stalo dívenko?&quot; Zeptal se tě konejšivě. Ani nevíš co máš vlastně říct. Tak tam jen tak stojíš a pláčeš. Starý pán vstal a obejmul tě. &quot;Všechno je v pořádku dítě moje.&quot; Říká ti konejšivě. &quot;Když... když...&quot; Zalykáš se &quot;Když já jsem to nezvládla... Ne-uh-lí...dala jsem svůj pok-lad...&quot; Teče ti z nosu a vzlykáš tak, že další slova už úplně zanikla.
+&lt;/center&gt;
+
+&lt;&lt;audio &quot;:all&quot; fadeout&gt;&gt;&lt;&lt;cacheaudio &quot;kapitola1&quot; &quot;music/kapitola1.mp3&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; fadeout&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Odejdeš domů" tags="korektura Změna-hudby" position="4825,2950" size="100,100">Sklopila jsi hlavu a po tvářích ti začaly téct slzy. Šouravým krokem ses vydala nazpět po mole k souši. Obraz se ti slzami vlní a slané kapky dopadají a vpíjí se do starého dřeva, které před tím už tolik slané vody máčelo. Jdeš teď blízko okraji a v jednu chvíli jsi musela zastavit, abys nenarazila do starého vousatého rybáře v čepici, který tam na kraji mola sedí a rybaří. Ten k tobě vzhlídne a v jeho dobrácké tváři se objeví ustaraný výraz. &quot;Copak se stalo dívenko?&quot; Zeptal se tě konejšivě. Ani nevíš co máš vlastně říct. Tak tam jen tak stojíš a pláčeš. Starý pán vstal a obejmul tě. &quot;Všechno je v pořádku dítě moje.&quot; Říká ti konejšivě. &quot;Když... když...&quot; Zalykáš se &quot;Když já jsem to nezvládla... Ne-uh-lí...dala jsem svůj pok-lad...&quot; Teče ti z nosu a vzlykáš tak, že další slova už úplně zanikla.
 Trvalo to ještě nějakou dobu, než jsi se uklidnila. Pak už jsi se však díky dědově konejšivému hlasu zklidnila a teď spolu sedíte na okraji mola, nohy vám visí kousek nad vodou a pozorujete vodní hladinu. Ty ještě občas popotáhneš, ale už nebrečíš.
 Děda k tobě otočí hlavu a zeptá se: &quot;Byl pro tebe ten poklad doopravdy cenný?&quot;
 Mlčky zakýváš hlavou. Rybář také zlehka pokývá a potom řekne. &quot;Za poklady které jsou tvému srdci nejcennější stojí za to projít nějakými trablemi, aby jsi si jich pak dokázala doopravdy vážit...&quot; &quot;Takže... Takže to nemám vzdávat?&quot; Zvedneš k němu lesklé oči. &quot;Pokud cítíš, že tě to za ním táhne a je to myšlenka čistá a jasná, potom klidně leť přes třicatero hor a plav přes třicatero moří...&quot; Odvětí ti s úsměvem stařík. Tyto slova v tobě jako jiskra z nebe zažehly ten pláčem uhašený plamen po dobrodružství a spravedlnosti. Naposledy jsi si otřela tváře a vstala. &quot;Tak jo... tak já to teda zvládnu.&quot; Řekneš a zhluboka se nadechneš svěžího větru vanoucího z moře. &quot;Jen běž, kam tě tvůj poklad vede...&quot; Řekne dědeček s úsměvem a také se zdvihne ze země. &quot;A vy jdete kam?&quot; Zeptáš se ho. &quot;Domů... já už svůj poklad totiž našel.&quot; Řekne pak. &quot;Mnoho štěstí v nalezení toho tvého.&quot; A s těmito slovy odešel.
@@ -2311,7 +2314,7 @@ Ovanul tě slabý větřík a ty jsi na balkón vkročila. Jak se ale teď dosta
 Za tebou se ozvalo zasténání... Vyplašeně se ohlédneš a vidíš, jak se pekař díky čerstvému vánku probral a chytil se za čelo. Musíš jednat rychle! Naklonila ses přes okraj dřevěného zábradlí a podívala se na terasu. Jediná varianta, kterou vidíš, je velký sud s dešťovou vodou hned zprava pod balkónem... Je to sice celkem výška, ale ty už pěkně dlouho skáčeš do moře z útesů, takže to pro tebe není žádná velká výzva. Nadechneš se - nohy se ti přeci jen malinko třesou - [[a skočíš]]</tw-passagedata><tw-passagedata pid="351" name="Staré štokrle" tags="korektura" position="4525,875" size="100,100">Přiběhneš ke štokrleti, se zavrzáním ho zdvihneš ze země a doběhneš s ním nazpět k oknu.
 
 [[Hodit ho do okna]]
-[[Držet ho a udeřit jím do okna]]</tw-passagedata><tw-passagedata pid="352" name="StoryCaption" tags="" position="0,125" size="100,100">&lt;h1&gt;$kapitola&lt;/h1&gt;\
+[[Držet ho a udeřit jím do okna]]</tw-passagedata><tw-passagedata pid="352" name="StoryCaption" tags="" position="0,150" size="100,100">&lt;h1&gt;$kapitola&lt;/h1&gt;\
  &lt;&lt;if $inventar &gt;&gt;
 &lt;b&gt;Inventář:&lt;/b&gt;
  &lt;&lt;if $udička eq 1 &gt;&gt;Udička
@@ -2989,7 +2992,9 @@ Sice jsi už velká holka, ale síť je moc těžká a pádlování náročné, 
 &lt;&lt;set $jaksemas = 1&gt;&gt;
 &lt;&lt;set $jakjsisevyspal = 1&gt;&gt;
 &lt;&lt;set $jakdlouhorybaris = 1&gt;&gt;
-&lt;&lt;set $dalsibod = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="467" name="Začít křičet, aby tě vytáhli" tags="korektura" position="3750,5850" size="100,100">&quot;Haló! Pomoc! Zavřeli jste mě tu!&quot; Začneš hulákat a v tom malém prostoru tě ze sebe samotné bolí uši. V příští vteřině se však i ten poslední otvor uzavřel masivní zátkou. Všechny zvuky z venčí zmizely a ocitla ses v naprosté tmě...
+&lt;&lt;set $dalsibod = 0&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="467" name="Začít křičet, aby tě vytáhli" tags="korektura" position="3750,5850" size="100,100">&quot;Haló! Pomoc! Zavřeli jste mě tu!&quot; Začneš hulákat a v tom malém prostoru tě ze sebe samotné bolí uši. V příští vteřině se však i ten poslední otvor uzavřel masivní zátkou. Všechny zvuky z venčí zmizely a ocitla ses v naprosté tmě...
 Chvíli se snažíš pěstmi bušit do stěn, sud je však zjevně velmi pevný a jeho zdi jsou tlusté. Po chvíli najednou cítíš, jak se sud začal hýbat. Zapřela ses o stěny a snažíš se držet balanc. Sudem to kymácí ze strany na stranu a potom se náhle překlopil na bok. Spadla jsi a válíš se mezi tvrdými balíky. Hned na to však sud někdo začal kutálet po molu a ty teď uvnitř nadskakuješ a motáš se dokolečka. Jeden balík vyjel po stěně nahoru a když se náhle bečka zastavil, plnou vahou ti spadl na hlavu až jsi [[ztratila vědomí...]]</tw-passagedata><tw-passagedata pid="468" name="Začít páčit" tags="korektura" position="3875,2300" size="100,100">Vzala jsi za naběračku a začala:
 
 [[Páčit ji doleva]]
@@ -4054,10 +4059,10 @@ Chvilku ještě panovalo napjaté ticho a pak se zezdola ozvaly rázné kroky na
 Sebrala jsi rychle řetěz ze země a potěžkala ho v ruce.
 
 [[Znovu švihnout]]
-[[Udělat z něj kouli a tu hodit]]</tw-passagedata><tw-passagedata pid="610" name="Podpora/zpětná vazba" tags="" position="0,250" size="100,100">&lt;center&gt;
+[[Udělat z něj kouli a tu hodit]]</tw-passagedata><tw-passagedata pid="610" name="Podpora/zpětná vazba" tags="" position="0,275" size="100,100">&lt;center&gt;
 &lt;img src=&quot;images/QR.jpg&quot; width=&quot;256&quot; height=&quot;256&quot;&gt;
 ↑__Finanční podpora projektu__↑
-(Když do poznámky k převodu napíšeš své jméno či přezdívku, odpečetíš se tak do tohoto projektu)
+(Když do poznámky k převodu napíšeš své jméno či přezdívku, obtiskneš se tak do tohoto projektu)
 
 &lt;a href=&quot;https://bit.ly/NaVlnach&quot;&gt;Odebírat herní novinky&lt;/a&gt;
 

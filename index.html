@@ -2274,7 +2274,8 @@ __//Prstýnek//__
 
 &lt;&lt;audio &quot;:all&quot; fadeout&gt;&gt;
 
-&lt;&lt;set $udička = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="341" name="Skočila na podlahu balkónu" tags="korektura Smrt-ok Změna-hudby" position="5100,775" size="100,100">Skočila na podlahu balkónu a dopadla bosýma nohama do hromady střepů. Zařvala jsi bolestí. Ve stejnou chvíli na tebe zevnitř zařval i pekař, rozlíceně stojící uprostřed místnosti: &quot;HEJ! Co tam děláš?!&quot;  
+&lt;&lt;set $udička = 0&gt;&gt;
+&lt;&lt;set $prstýnek to true&gt;&gt;</tw-passagedata><tw-passagedata pid="341" name="Skočila na podlahu balkónu" tags="korektura Smrt-ok Změna-hudby" position="5100,775" size="100,100">Skočila na podlahu balkónu a dopadla bosýma nohama do hromady střepů. Zařvala jsi bolestí. Ve stejnou chvíli na tebe zevnitř zařval i pekař, rozlíceně stojící uprostřed místnosti: &quot;HEJ! Co tam děláš?!&quot;  
 V naprosté panice a agónii neskutečné bolesti se potácivě vyšplháš na zábradlí. Všechno máš rozmazané slzami. Snažíš se zaostřit, kam bys mohla skočit a v příští sekundě ztrácíš balanc a padáš dolů. Spadla jsi krkem přesně na hranu velkého sudu s děšťovou vodou a posledním zvukem, cos uslyšela, bylo hlasité rupnutí, když ti praskla krční páteř. &lt;&lt;if $Umrtí eq 0&gt;&gt;[[...TMA...]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $Umrtí eq 1&gt;&gt;, tobě nějak zvláštně povědomá [[...TMA...|...TMA...2]]&lt;&lt;/if&gt;&gt;&lt;&lt;if $Umrtí eq 2&gt;&gt;, tobě povědomá [[...TMA...|...TMA...3]]&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;set $zlomenykrk to true&gt;&gt;
@@ -2340,6 +2341,8 @@ Za tebou se ozvalo zasténání... Vyplašeně se ohlédneš a vidíš, jak se p
  &lt;&lt;if $sušenka eq 1&gt;&gt;Sušenka
  &lt;&lt;/if&gt;&gt;\
  &lt;&lt;if $bonbon is true&gt;&gt;Bonbón
+ &lt;&lt;/if&gt;&gt;\
+ &lt;&lt;if $prstýnek is true&gt;&gt;Prstýnek
  &lt;&lt;/if&gt;&gt;\
  
  
@@ -3002,6 +3005,7 @@ Sice jsi už velká holka, ale síť je moc těžká a pádlování náročné, 
 &lt;&lt;set $jakdlouhorybaris = 1&gt;&gt;
 &lt;&lt;set $dalsibod = 0&gt;&gt;
 &lt;&lt;set $Umrtí = 0&gt;&gt;
+&lt;&lt;set $prstýnek to false&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;kapitola1&quot; &quot;music/kapitola1.mp3&quot;&gt;&gt;
 &lt;&lt;audio kapitola1 play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="467" name="Začít křičet, aby tě vytáhli" tags="korektura" position="3750,5850" size="100,100">&quot;Haló! Pomoc! Zavřeli jste mě tu!&quot; Začneš hulákat a v tom malém prostoru tě ze sebe samotné bolí uši. V příští vteřině se však i ten poslední otvor uzavřel masivní zátkou. Všechny zvuky z venčí zmizely a ocitla ses v naprosté tmě...
@@ -3404,7 +3408,9 @@ V mžiku stojíš na nohou. Tvá odvážná nátura tě žene vpřed... Ale kudy
 &lt;&lt;set $zpomaleni = 3&gt;&gt;\
 \
 &lt;&lt;audio &quot;:all&quot; fadeout&gt;&gt;\
-&lt;&lt;cacheaudio &quot;zlodejina&quot; &quot;music/zlodejina.mp3&quot;&gt;&gt;&lt;&lt;audio zlodejina play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="527" name="dojít pěšky" tags="korektura Změna-hudby" position="1925,1725" size="100,100">Vůz ti rychle zmizel z dohledu a ty sama pokračuješ pěšky.
+&lt;&lt;cacheaudio &quot;zlodejina&quot; &quot;music/zlodejina.mp3&quot;&gt;&gt;&lt;&lt;audio zlodejina play loop&gt;&gt;
+
+&lt;&lt;set $prstýnek to false&gt;&gt;</tw-passagedata><tw-passagedata pid="527" name="dojít pěšky" tags="korektura Změna-hudby" position="1925,1725" size="100,100">Vůz ti rychle zmizel z dohledu a ty sama pokračuješ pěšky.
 Slunce vystoupalo až nad střechy a začíná pražit do čela. Po modravé obloze se pozvolna převalují poloprůhledné mráčky a ulicí se jen zřídka prožene slabý závan větříku. Probíháš právě kolem vysoké terasy pekárny a drobný závan malinko rozpohyboval velký fábor, který z ní visí. Je na něm vyobrazený znak čerstvě upečeného bochníku. 
 Jak se tržiště blíží, už ho z dálky slyšíš a cítíš. Posledních pár spěšných kroků a už se za zatáčkou vynořilo v plné své kráse. Desítky stánků s barevnými plátěnými střechami stojí v několika prstencových řadách na kruhovém náměstí s kašnou uprostřed. Trhem vede jedna hlavní přímá ulička mezi stánky, kolem kašny až na druhou stranu, kde cesta dál pokračuje do přístavu. Okraje náměstí jsou lemovány řadou vysokých domů a po pravé straně se tyčí stará budova městské radnice s věžičkou. Na věžičce ze všech čtyř stran vlají fábory se znakem vašeho ostrova - bleděmodrá plocha moře s jednoduše vyobrazenou plachetnicí a za ní zelený kopec symbolizující váš ostrov s věží majáku, který ostrovu dominuje. Ještě o kus výš jsou do zdi vsazeny velké železné hodiny, které zrovna ukazují za pět sedm. A úplně nahoře pod špičatou taškovou stříškou se zlatou korouhvičkou se pohupuje velký mosazný zvon. 
 Vzduchem se line směs vůní koření, rybiny a kouře. Všude se ozývají hlasy překřikujících se prodejců a mezi stánky kličkují nakupující zdejší i cizinci, kteří sem z mořských dálav zavítali. Zloděje tu však nikde nevidíš...

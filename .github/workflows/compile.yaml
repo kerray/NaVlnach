@@ -24,7 +24,7 @@ jobs:
           go get
           go install
           export PATH=$PATH:$(go env GOPATH)/bin
-          ./tweego -o dist/index.html --no--trim src
+          tweego -o dist/index.html --no--trim src
 
       - name: Gather artifacts (may not be necessary)
         run: |

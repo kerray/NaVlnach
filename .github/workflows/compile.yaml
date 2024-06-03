@@ -12,41 +12,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Download Tweego
-        run: |
-          wget https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip
+      - name: Use Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13.x
 
-      - name: Unzip Tweego
+      - name: build game
         run: |
-          unzip tweego-2.1.1-linux-x64.zip -d tweego
-
+          go get github.com/tmedwards/tweego
+          export PATH=$PATH:$(go env GOPATH)/bin
       - name: Run Tweego
         run: |
-          ./tweego/tweego -o index.html --module=scripts.js --module=std.css --no--trim src
+          ./tweego -o dist/index.html --no--trim src
 
-      - name: Gather artifacts
+      - name: Gather artifacts (may not be necessary)
         run: |
-          mv index.html $GITHUB_WORKSPACE/index.html
-          mv std.css $GITHUB_WORKSPACE/std.css || true
-          mv scripts.js $GITHUB_WORKSPACE/scripts.js || true
-          mv music $GITHUB_WORKSPACE/music || true
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: tweego-output
-          path: |
-            $GITHUB_WORKSPACE/index.html
-            $GITHUB_WORKSPACE/std.css
-            $GITHUB_WORKSPACE/scripts.js
-            $GITHUB_WORKSPACE/music
+          mv std.css ./dist/std.css || true
+          mv scripts.js ./dist/scripts.js || true
+          mv music ./dist/music || true
 
       # upload to github.io
       #- name: Deploy to GitHub Pages
       #uses: peaceiris/actions-gh-pages@v3
       #with:
       #github_token: ${{ secrets.GITHUB_TOKEN }}
-      #publish_dir: $GITHUB_WORKSPACE
+      #publish_dir: ./dist
       #publish_branch: gh-pages
-      #cname: ${{ secrets.CNAME }}
-      #commit_message: ${{ github.event.head_commit.message }}
